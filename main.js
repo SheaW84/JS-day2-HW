@@ -18,7 +18,14 @@ let person3 = {
     }]
 }
 
+function favFoods(person){
+    for(const food in person){
+        console.log(`${food} : ${person[food]}`)
+    }
+    
+}
 
+console.log(favFoods(person3))
 
 //=======Exercise #2=========//
 /*
@@ -31,7 +38,18 @@ age by 3 years. Use an arrow function for both methods
 */
 
 // Create our Person Prototype
+class Person{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
 
+    printInfo = () => `Name: ${this.name} \n Age: ${this.age}`
+    
+
+    addAge = (num)=> this.age + num
+
+}
 
 // Use an arrow to create the printInfo method
 
