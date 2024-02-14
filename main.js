@@ -51,6 +51,14 @@ class Person{
 
 }
 
+let person1 = new Person('Shea', 39)
+console.log(person1.printInfo())
+console.log(person1.addAge(1))
+let person2 = new Person('Caroline', 35)
+console.log(person2.printInfo())
+console.log(person2.addAge(3))
+
+
 // Use an arrow to create the printInfo method
 
 // Create another arrow function for the addAge method that takes a single parameter
