@@ -47,16 +47,18 @@ class Person{
     printInfo = () => `Name: ${this.name} \n Age: ${this.age}`
     
 
-    addAge = (num)=> this.age + num
+    addAge = ()=> this.age + 1
+
+    addAgeThree = (num) => this.age + num
 
 }
 
 let person1 = new Person('Shea', 39)
 console.log(person1.printInfo())
-console.log(person1.addAge(1))
+console.log(person1.addAge())
 let person2 = new Person('Caroline', 35)
 console.log(person2.printInfo())
-console.log(person2.addAge(3))
+console.log(person2.addAgeThree(3))
 
 
 // Use an arrow to create the printInfo method
@@ -72,3 +74,24 @@ console.log(person2.addAge(3))
     If the length is greater than ten console log "Big word". 
     If the length of the string is less than 10 console log "Small Number"
 */
+
+const isBigWord = (word) =>{
+    return new Promise((resolve,reject)=>{
+        if(word.length > 10){
+            resolve(word)
+        }else{
+            reject(false)
+        }
+    })
+}
+
+
+isBigWord('ShoobydooWop')
+
+.then((result)=>{
+    console.log('Big Word')
+})
+
+.catch((error) =>{
+    console.log('Small Number')
+})
